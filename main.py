@@ -2,6 +2,7 @@
 import os
 import pygame
 from title_screen import TitleScreen
+from play_screen import PlayScreen
 #-----------#
 
 #game class --#
@@ -14,6 +15,7 @@ class game:
         pygame.display.set_caption("Naruto: The Game")
         self.state = "TITLE"
         self.title_screen = TitleScreen(self)
+        self.play_screen = PlayScreen(self)
         #self.dungeon = Dungeon()
     
     def run(self):
@@ -46,11 +48,7 @@ class game:
             self.title_screen.render()
         elif self.state == "PLAY":
             # Render play state
-            self.screen.fill((50, 50, 50))
-            font = pygame.font.Font(None, 48)
-            text = font.render("Game Started! (Press ESC to quit)", True, (255, 255, 255))
-            self.screen.blit(text, (self.screen.get_width() // 2 - text.get_width() // 2, 
-                                   self.screen.get_height() // 2))
+            self.play_screen.render()
             pygame.display.flip()
 
 if __name__ == "__main__":
