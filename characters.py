@@ -1,5 +1,6 @@
 #-- Imports --#
 import pygame
+import random 
 #-------------#
 
 #-- Character class --#
@@ -12,6 +13,15 @@ class Shinobi:
         self.stats = None
         self.Inventory = []
         self.Jutsu = []
+        self.position = (0,0)
+        #metadata
+        self.health = 100
+        self.exp = 0
+        self.level = 1
+        self.xp_to_next_level = 100
+        self.max_health = 100
+        self.chakra = 100
+        self.max_chakra = self.chakra
     
     def move(self):
         pass 
