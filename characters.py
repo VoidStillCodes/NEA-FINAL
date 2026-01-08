@@ -4,7 +4,7 @@ import random
 #-------------#
 
 #-- Character class --#
-class Shinobi:
+class Shinobi(pygame.sprite.Sprite):
     def __init__(self):
         self.name = ""
         self.village = ""

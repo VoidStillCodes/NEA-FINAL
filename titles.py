@@ -1,7 +1,7 @@
 #-- Imports --#
 import pygame
 #----------------------#
-class tiles:
+class tiles(pygame.sprite.Sprite):
     def __init__(self):
         self.type = ""
         
